@@ -21,10 +21,13 @@ func Run() *gin.Engine {
 	_ = dbSvc.Initialize()
 
 	var productCtrl = controller.ProductController{ProductService: service.NewProductService()}
+	var orderCtrl = controller.OrderController{OrderService: service.NewOrderService()}
 
 	api := engine.Group(path.BaseUrl)
 	{
 		api.GET(path.Product, productCtrl.GetAllProducts)
+
+		api.POST(path.OrderLock, orderCtrl.Lock)
 	}
 
 	engine.NoRoute(func(context *gin.Context) {
