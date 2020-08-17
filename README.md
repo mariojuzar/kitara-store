@@ -80,7 +80,7 @@ execute this command to run test with go test framework
    
    ```
    {
-     "server_time": "0001-01-01T00:00:00Z",
+     "server_time": "2020-08-17T16:10:24.537827+07:00",
      "code": 200,
      "message": "OK",
      "data": {
@@ -107,7 +107,7 @@ execute this command to run test with go test framework
    
    ```
    {
-     "server_time": "0001-01-01T00:00:00Z",
+     "server_time": "2020-08-17T16:10:44.537827+07:00",
      "code": 400,
      "message": "some product not available",
      "data": null
@@ -118,7 +118,7 @@ execute this command to run test with go test framework
    
    ```
    {
-     "server_time": "0001-01-01T00:00:00Z",
+     "server_time": "2020-08-17T16:11:24.537827+07:00",
      "code": 400,
      "message": "product must in same store",
      "data": null
