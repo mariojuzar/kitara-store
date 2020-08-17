@@ -32,11 +32,13 @@ func (oc *OrderController) Lock(c *gin.Context)  {
 		if err != nil {
 			response.Code = http.StatusBadRequest
 			response.Message = err.Error()
+			response.ServerTime = time.Now()
 
 			c.JSON(http.StatusBadRequest, response)
 		} else {
 			response.Code = http.StatusOK
 			response.Message = http.StatusText(http.StatusOK)
+			response.ServerTime = time.Now()
 			response.Data = order
 
 			c.JSON(http.StatusOK, response)
